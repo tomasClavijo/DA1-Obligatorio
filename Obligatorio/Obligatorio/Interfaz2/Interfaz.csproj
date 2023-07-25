@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{108A4713-42A2-4A46-ACA8-4E3EE13929A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Interfaz2</RootNamespace>
+    <AssemblyName>Interfaz2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AgregarEvento.designer.cs">
+      <DependentUpon>AgregarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarProductor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AgregarProductor.designer.cs">
+      <DependentUpon>AgregarProductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AplicarCupon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AplicarCupon.Designer.cs">
+      <DependentUpon>AplicarCupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmarCompra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfirmarCompra.designer.cs">
+      <DependentUpon>ConfirmarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarEventos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EliminarEventos.designer.cs">
+      <DependentUpon>EliminarEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniciarSesion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IniciarSesion.designer.cs">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarCupon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModificarCupon.Designer.cs">
+      <DependentUpon>ModificarCupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarEventoBorrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModificarEventoBorrador.designer.cs">
+      <DependentUpon>ModificarEventoBorrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipal.designer.cs">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteCompras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReporteCompras.Designer.cs">
+      <DependentUpon>ReporteCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteEntradas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReporteEntradas.designer.cs">
+      <DependentUpon>ReporteEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarCupon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AgregarCupon.Designer.cs">
+      <DependentUpon>AgregarCupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarEventos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarEventos.designer.cs">
+      <DependentUpon>VisualizarEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarEventosBorrador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarEventosBorrador.designer.cs">
+      <DependentUpon>VisualizarEventosBorrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarFunciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualizarFunciones.designer.cs">
+      <DependentUpon>VisualizarFunciones.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgregarEvento.resx">
+      <DependentUpon>AgregarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProductor.resx">
+      <DependentUpon>AgregarProductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AplicarCupon.resx">
+      <DependentUpon>AplicarCupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmarCompra.resx">
+      <DependentUpon>ConfirmarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarEventos.resx">
+      <DependentUpon>EliminarEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniciarSesion.resx">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarCupon.resx">
+      <DependentUpon>ModificarCupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarEventoBorrador.resx">
+      <DependentUpon>ModificarEventoBorrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReporteCompras.resx">
+      <DependentUpon>ReporteCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEntradas.resx">
+      <DependentUpon>ReporteEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarCupon.resx">
+      <DependentUpon>AgregarCupon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarEventos.resx">
+      <DependentUpon>VisualizarEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarEventosBorrador.resx">
+      <DependentUpon>VisualizarEventosBorrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarFunciones.resx">
+      <DependentUpon>VisualizarFunciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{c6d85e3f-d2a8-4a0e-b218-0e14d01777a0}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatosEnMemoria\DatosEnMemoria.csproj">
+      <Project>{050e8069-bb67-4b73-ac16-544385884890}</Project>
+      <Name>DatosEnMemoria</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{4265b03c-79b3-4676-8ead-af5a70556a6b}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{ccc716fd-e048-45a8-b71e-78816d65b377}</Project>
+      <Name>Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaDeNegocio\LogicaDeNegocio.csproj">
+      <Project>{94ba5997-6cdf-4fc9-b0fd-72b2117276a2}</Project>
+      <Name>LogicaDeNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

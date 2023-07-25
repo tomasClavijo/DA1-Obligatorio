@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6D85E3F-D2A8-4A0E-B218-0E14D01777A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccesoDatos</RootNamespace>
+    <AssemblyName>AccesoDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContextoEvento.cs" />
+    <Compile Include="Implementaciones\RepositorioAsistenteImp.cs" />
+    <Compile Include="Implementaciones\RepositorioProductorImp.cs" />
+    <Compile Include="Interfaces\RepositorioAsistente.cs" />
+    <Compile Include="Interfaces\RepositorioProductor.cs" />
+    <Compile Include="Migrations\202206051425057_InitialCreate.cs" />
+    <Compile Include="Migrations\202206051425057_InitialCreate.designer.cs">
+      <DependentUpon>202206051425057_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206072218425_AgregoEventoTicketFuncionConID.cs" />
+    <Compile Include="Migrations\202206072218425_AgregoEventoTicketFuncionConID.designer.cs">
+      <DependentUpon>202206072218425_AgregoEventoTicketFuncionConID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206072237574_ModificacionDeClaseEventoParaLaCreacionDeEventosBorrador.cs" />
+    <Compile Include="Migrations\202206072237574_ModificacionDeClaseEventoParaLaCreacionDeEventosBorrador.designer.cs">
+      <DependentUpon>202206072237574_ModificacionDeClaseEventoParaLaCreacionDeEventosBorrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206101601347_AgregoClavesYCascadeOnDelete.cs" />
+    <Compile Include="Migrations\202206101601347_AgregoClavesYCascadeOnDelete.designer.cs">
+      <DependentUpon>202206101601347_AgregoClavesYCascadeOnDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206132349277_AgregoComprasAlContexto.cs" />
+    <Compile Include="Migrations\202206132349277_AgregoComprasAlContexto.designer.cs">
+      <DependentUpon>202206132349277_AgregoComprasAlContexto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206140021093_AgregoComprasConClavesForaneas.cs" />
+    <Compile Include="Migrations\202206140021093_AgregoComprasConClavesForaneas.designer.cs">
+      <DependentUpon>202206140021093_AgregoComprasConClavesForaneas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206140040531_AgregoComprasConClavesForaneas2.cs" />
+    <Compile Include="Migrations\202206140040531_AgregoComprasConClavesForaneas2.designer.cs">
+      <DependentUpon>202206140040531_AgregoComprasConClavesForaneas2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206141318340_AgregoEntradaVendida.cs" />
+    <Compile Include="Migrations\202206141318340_AgregoEntradaVendida.designer.cs">
+      <DependentUpon>202206141318340_AgregoEntradaVendida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206152303074_ModificacionCompraAgregoFechaCompra.cs" />
+    <Compile Include="Migrations\202206152303074_ModificacionCompraAgregoFechaCompra.designer.cs">
+      <DependentUpon>202206152303074_ModificacionCompraAgregoFechaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206160356239_AgregoCupones.cs" />
+    <Compile Include="Migrations\202206160356239_AgregoCupones.designer.cs">
+      <DependentUpon>202206160356239_AgregoCupones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206160414280_AgregoAsistenteCuponEvento.cs" />
+    <Compile Include="Migrations\202206160414280_AgregoAsistenteCuponEvento.designer.cs">
+      <DependentUpon>202206160414280_AgregoAsistenteCuponEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{4265b03c-79b3-4676-8ead-af5a70556a6b}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202206051425057_InitialCreate.resx">
+      <DependentUpon>202206051425057_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206072218425_AgregoEventoTicketFuncionConID.resx">
+      <DependentUpon>202206072218425_AgregoEventoTicketFuncionConID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206072237574_ModificacionDeClaseEventoParaLaCreacionDeEventosBorrador.resx">
+      <DependentUpon>202206072237574_ModificacionDeClaseEventoParaLaCreacionDeEventosBorrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206101601347_AgregoClavesYCascadeOnDelete.resx">
+      <DependentUpon>202206101601347_AgregoClavesYCascadeOnDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206132349277_AgregoComprasAlContexto.resx">
+      <DependentUpon>202206132349277_AgregoComprasAlContexto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206140021093_AgregoComprasConClavesForaneas.resx">
+      <DependentUpon>202206140021093_AgregoComprasConClavesForaneas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206140040531_AgregoComprasConClavesForaneas2.resx">
+      <DependentUpon>202206140040531_AgregoComprasConClavesForaneas2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206141318340_AgregoEntradaVendida.resx">
+      <DependentUpon>202206141318340_AgregoEntradaVendida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206152303074_ModificacionCompraAgregoFechaCompra.resx">
+      <DependentUpon>202206152303074_ModificacionCompraAgregoFechaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206160356239_AgregoCupones.resx">
+      <DependentUpon>202206160356239_AgregoCupones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206160414280_AgregoAsistenteCuponEvento.resx">
+      <DependentUpon>202206160414280_AgregoAsistenteCuponEvento.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
